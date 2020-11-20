@@ -1,3 +1,17 @@
-.modal {
-  display: none;
+html {
+  box-sizing: border-box;
+}
+
+.modal-container {
+  /* display: none; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25% 25%;
+  height: 100px;
+  width: 100px;
+}
+
+.cancel-btn {
+  display: flexbox;
 }
