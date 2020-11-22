@@ -1,16 +1,19 @@
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("myModal-btn");
-var span = document.getElementsByClassName("cancel-btn")
+const modal = document.querySelector(".modal");
+const trigger = document.querySelector(".trigger");
+const okayButton = document.querySelector(".okay-button");
+const cancelButton = document.querySelector(".cancel-button");
 
-btn.onclick = function() {
-    modal.style.display = "block";
+function toggleModal() {
+    modal.classList.toggle("show-modal");
 }
 
-span.onclick = function() {
-    modal.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
     }
 }
+
+trigger.addEventListener("click", toggleModal);
+okayButton.addEventListener("click", toggleModal);
+cancelButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
