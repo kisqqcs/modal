@@ -1,3 +1,7 @@
+html {
+  box-sizing: border-box;
+}
+
 .modal {
   position: fixed;
   left: 0;
@@ -20,8 +24,12 @@
   width: 24rem;
   border-radius: 0.5rem;
 }
-.close-button {
-  float: right;
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+.okay-button {
+  margin: 1.5rem;
   width: 1.5rem;
   line-height: 1.5rem;
   text-align: center;
@@ -29,7 +37,16 @@
   border-radius: 0.25rem;
   background-color: lightgray;
 }
-.close-button:hover {
+.cancel-button {
+  margin: 1.5rem;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+.okay-button:hover {
   background-color: darkgray;
 }
 .show-modal {
